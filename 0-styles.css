@@ -1,0 +1,137 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the default font family */
+:root {
+    --primary-color: #000000; /* Primary color */
+    --header-bg-color: #ffffff00; /* Transparent background for header */
+    --text-color: #ffffff; /* White text color */
+    --body-bg-color: #99f1fd; /* Body background color */
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+    --container-max-width: 1200px; /* Maximum width for container */
+    --menu-hover-color: #FF6565; /* Updated menu hover color */
+    --button-bg-color: #FF6565; /* Updated button background color */
+    --button-hover-color: #ffffff; /* Slightly lighter shade for button hover */
+    /*--membership-bg-color: #071629;*/ /* Updated membership background color */
+    --membership-bg-color: #0a1f44; /* Updated membership background color */
+}
+
+/* General body styling */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--body-bg-color);
+}
+
+/* Header styling ================================*/
+header {
+    background-color: var(--header-bg-color); /* Transparent background */
+    color: var(--text-color);
+    padding: 10px 0;
+    position: absolute; /* Position header at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1; /* Ensure header is on top of other elements */
+}
+
+/* Container for header elements */
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+/* Logo styling */
+header .header-logo img {
+    width: 167.02px;
+    height: auto;
+}
+
+/* Navigation menu styling */
+header .header-nav  ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* Navigation menu links styling */
+header .header-nav ul a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Navigation menu links hover effect */
+header .header-nav a:hover {
+    text-decoration: underline;
+    color: var(--menu-hover-color);
+}
+
+/* Hero section styling ================================*/
+
+.hero {
+    background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover; /* Background image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    position: relative; /* Relative positioning for containing absolute elements */
+}
+
+/* Hero content styling */
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Hero heading styling */
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: -300px; /* Slightly offset from the top */;
+    /* Center*/
+    text-align: center;
+}
+
+/* Hero paragraph styling */
+.hero-content p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0; /* Slightly offset from the top */
+}
+
+/* Button styling in banner */
+.hero-content button {
+    background-color: var(--button-bg-color);
+    /* button shadow*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Button hover effect */
+.hero-content button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-bg-color);
+}
+
+/* Hero-paragraph */
+.hero-paragraph {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 2rem;
+}
