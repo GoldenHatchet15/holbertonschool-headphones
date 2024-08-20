@@ -141,3 +141,67 @@ header .header-nav a:hover {
     margin: 0 auto;
 }
 
+/* What we do section styling */
+.what-we-do {
+    font-family: var(--font-family);
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.what-we-do .what-we-do-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.what-we-do-title h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.what-we-do-title p {
+    font-size: 16px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 700px;
+    padding: 10px;
+    margin: 0 auto 100px;
+    margin-top: -20px;
+}
+
+.what-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 0 20px;
+}
+
+.what-image {
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.what-image img {
+    width: 200px;
+    height: 120px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px auto; /* Center the image horizontally */
+}
+
+.what-image h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.what-image p {
+    font-size: 0.9rem;
+    line-height: 2;
+}
