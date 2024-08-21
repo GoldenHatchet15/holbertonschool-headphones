@@ -68,6 +68,155 @@ header .header-nav a:hover {
     color: var(--menu-hover-color);
 }
 
+/* hide checkbox */
+.menu-btn {
+    display: none;
+}
+
+/* fix for tablet screen */
+@media only screen and (max-width: 768px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    header .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .header-logo img {
+        width: 200px; /* Further reduce the logo size for smaller screens */
+        margin-bottom: 10px;
+        /* move picture to the left of the page */
+        margin-left: -350px;
+
+    }
+
+    
+
+    header .header-nav ul {
+        float: right;
+        margin-left: 350px;
+        margin-top: -45px;
+        gap: 40px;
+    }
+
+    header .header-nav ul a {
+        display: block;
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    /* hide checkbox */
+    .menu-btn {
+        display: none;
+    }
+    
+}
+
+/* fix for mobile screen */
+@media only screen and (max-width: 480px) {
+
+    header .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .header-logo img {
+        width: 200px; /* Further reduce the logo size for smaller screens */
+        margin-bottom: 10px;
+        /* move picture to the left of the page */
+        margin: 0 auto;
+    }
+
+
+    header .header-nav {
+        display: none; /* Initially hide the nav menu */
+    }
+
+    /* Hamburger menu icon */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 330px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .menu-icon .navicon {
+        background-color: #ffffff;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        margin: 0  auto;
+    }
+
+    .menu-icon .navicon::before,
+    .menu-icon .navicon::after {
+        content: '';
+        background-color: #ffffff;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-icon .navicon::before {
+        top: -8px;
+    }
+
+    .menu-icon .navicon::after {
+        top: 8px;
+    }
+
+    /* Display nav menu when checked */
+    .menu-btn:checked ~ .header-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 50px;
+        
+    }
+
+    .menu-btn:checked ~ .header-nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .menu-btn:checked ~ .header-nav ul a {
+        margin-top: 20px;
+        font-size: 16px; /* Adjust font size for better readability on smaller screens */
+        margin-left: -330px;
+        
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::before {
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::before,
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+        top: 0;
+    }
+}
+
 /* Hero section styling */
 .hero {
     background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
@@ -141,6 +290,97 @@ header .header-nav a:hover {
     margin: 0 auto;
 }
 
+/* fix for tablet screen */
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%; /* Adjust the width to ensure it fits within the screen */
+        padding: 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px; /* Adjust font size for better readability on smaller screens */
+        margin-top: 50px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+
+    .hero-content a.btn {
+        padding: 10px 20px; /* Adjust padding for the button */
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .hero-paragraph {
+        margin-top: 20px;
+        font-size: 14px; /* Adjust the paragraph font size */
+    }
+
+    .hero-paragraph p {
+        max-width: 90%; /* Ensure the paragraph width fits within the screen */
+        line-height: 1.5;
+    }
+}
+
+/* fix for mobile screen */
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%; /* Adjust the width to ensure it fits within the screen */
+        padding: 0 5px;
+    }
+
+    .hero-text h1 {
+        font-size: 20px; /* Further reduce font size for better readability on smaller screens */
+        margin-top: 50px;
+        line-height: normal;
+    }
+
+    .hero-text p {
+        font-size: 14px; /* Further reduce font size for better readability on smaller screens */
+        margin: 15px 0;
+    }
+
+    .hero-content a.btn {
+        padding: 10px 20px; /* Adjust padding for the button */
+        font-size: 14px; /* Further reduce font size for better readability on smaller screens */
+        margin-top: 15px;
+    }
+
+    .hero-paragraph {
+        margin-top: 20px;
+        font-size: 12px; /* Further reduce font size for better readability on smaller screens */
+    }
+
+    .hero-paragraph p {
+        max-width: 90%; /* Ensure the paragraph width fits within the screen */
+        line-height: 1.5;
+    }
+}
+
 /* What we do section styling */
 .what-we-do {
     font-family: var(--font-family);
@@ -188,8 +428,8 @@ header .header-nav a:hover {
 }
 
 .what-image img {
-    width: 200px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
     display: block;
     margin: 0 auto 10px auto; /* Center the image horizontally */
