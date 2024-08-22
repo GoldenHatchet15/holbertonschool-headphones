@@ -47,7 +47,7 @@ header .header-container {
 }
 
 header .header-logo img {
-    width: 167px;
+    width: 161px;
     height: auto;
 }
 
@@ -60,7 +60,7 @@ header .header-nav ul a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 header .header-nav a:hover {
@@ -271,7 +271,7 @@ header .header-nav a:hover {
 }
 
 .hero-content a.btn:hover {
-    background-color: var(--button-hover-color);
+    background-color: transparent;
     color: var(--button-bg-color);
 }
 
@@ -361,7 +361,7 @@ header .header-nav a:hover {
 
     .hero-text p {
         font-size: 14px; /* Further reduce font size for better readability on smaller screens */
-        margin: 15px 0;
+        margin-top: -100px;
     }
 
     .hero-content a.btn {
@@ -418,8 +418,7 @@ header .header-nav a:hover {
 .what-images-container {
     display: flex;
     justify-content: center;
-    gap: 150px;
-    padding: 0 20px;
+    gap: 50px;
 }
 
 .what-image_t, 
@@ -543,3 +542,425 @@ header .header-nav a:hover {
     }
 
 }
+
+/* Our results section styling ==============================*/
+
+.our-results {
+    background: url('./images/headphones_hero_2.jpg') no-repeat center center/cover;
+    font-family: var(--font-family);
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    position: relative;
+}
+
+.our-results .our-results-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.our-results-title h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.our-results-title p {
+    font-size: 16px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 700px;
+    padding: 10px;
+    margin: 0 auto 100px;
+    margin-top: -20px;
+}
+
+.our-results-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 0 20px;
+}
+
+.our-image_t, 
+.our-image_b {
+    position: relative;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.our-image_t img, 
+.our-image_b img {
+    width: 190px;
+    height: 190px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px auto; /* Center the image horizontally */
+}
+
+.our-image_t h3, 
+.our-image_b h3 {
+    font-size: 32px;
+    margin: 0; /* Remove bottom margin */
+    font-weight: 700;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    color: #ffffff; /* Ensure text color contrasts with the background */
+}
+
+.our-image_t p, 
+.our-image_b p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 5px;
+    position: absolute;
+    top: 60%; /* Adjust as needed to position below the h3 inside the pentagon */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 70%; /* Ensure the text fits well within the pentagon */
+}
+
+/* fix for tablet screen */
+@media only screen and (max-width: 768px) {
+    .our-results {
+        padding: 250px 0;
+    }
+
+    .our-results-title h2 {
+        font-size: 32px; /* Adjust font size for better readability on smaller screens */
+        margin-bottom: 40px;
+        margin-top: -120px;
+    }
+
+    .our-results-title p {
+        font-size: 16px;
+        margin: 15px 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Grid layout for the images */
+    .our-results-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        justify-items: center;
+        padding: 0 20px;
+        margin: 100px 0;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -100px;
+    }
+
+    /* Ensure the images and text scale well */
+    .our-image_t img, 
+    .our-image_b img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .our-image_t h3, 
+    .our-image_b h3 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    
+    
+
+}
+
+/* fix for mobile screen */
+
+@media only screen and (max-width: 480px) {
+    
+    .our-results {
+        padding: 200px 20px;
+    }
+
+    .our-results-title h2 {
+        font-size: 32px; 
+        margin-bottom: 20px;
+        margin-top: -80px;
+        text-align: center;
+    }
+
+    .our-results-title p {
+        font-size: 16px; /* Smaller font size for the paragraph */
+        line-height: 1.6;
+        margin: 0 auto 30px auto;
+        text-align: center; 
+        max-width: 100%; /* Ensure it doesn't stretch too wide */
+    }
+
+    .our-results-container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding: 0;
+    }
+
+    .our-image_t, 
+    .our-image_b {
+        text-align: center;
+    }
+
+}
+
+/* Contact Us section styling ==============================*/
+
+.contact-us {
+    max-width: 800px; /* Slightly reduce the overall max-width */
+    margin: 0 auto;
+    padding: 150px 30px; /* Adjust padding to reduce space */
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content within */
+}
+
+
+.contact-us header {
+    width: 100%; /* Ensure the header takes the full width */
+    text-align: center; /* Center-align the header text */
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+
+.section-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #071629;
+    margin-bottom: 10px;
+    text-align: center; /* Ensure the section title is centered */
+}
+
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Make the form take up full width */
+    max-width: 400px; /* Set a max-width for the form for balance */
+    margin-top: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    display: none; /* Hide the label */
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px 10px; /* Adjust padding for comfort */
+    font-size: 16px;
+    border: none; /* Remove the border */
+    border-bottom: 1px solid #cccccc; /* Add a bottom border to create the underline */
+    border-radius: 0; /* Remove border-radius to prevent rounded corners */
+    background-color: transparent; /* Make the background transparent */
+    box-sizing: border-box;
+    width: 100%; /* Ensure the input fields take up full width */
+    outline: none; /* Remove default outline */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom: 1px solid #ff6565; /* Change the underline color on focus */
+    outline: none; /* Ensure no outline appears */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--primary-color); /* Change this to your desired color */
+    opacity: 1; /* Ensures the color is fully opaque */
+    font-weight: 600;
+}
+
+
+.btn-primary {
+    padding: 15px 30px;
+    background-color: var(--button-bg-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-bg-color);
+    /* add border line*/
+   
+}
+
+
+/* fix for mobile screen */
+
+@media only screen and (max-width: 480px) {
+    .contact-us {
+        padding: 200px 20px;
+    }
+
+    .contact-us header {
+        margin-top: -80px;
+    }
+
+    .contact-us form {
+        margin-top: 40px;
+        width: 100%; /* Make the form take up full width */
+        max-width: 600px; /* Set a max-width for the form for balance */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 5px; /* Adjust padding to create space for the underline */
+        font-size: 16px;
+        border: none; /* Remove the border */
+        border-bottom: 1px solid #cccccc; /* Add a bottom border to create the underline */
+        border-radius: 0; /* Remove border-radius to prevent rounded corners */
+        background-color: transparent; /* Make the background transparent */
+        box-sizing: border-box;
+        width: 100%;
+        outline: none; /* Remove default outline */
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: var(--primary-color); /* Change this to your desired color */
+        opacity: 1; /* Ensures the color is fully opaque */
+        font-weight: 600;
+    }
+
+    .btn-primary {
+        padding: 15px 30px;
+        background-color: var(--button-bg-color);
+        color: #ffffff;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+        width: fit-content;
+        margin: 20px auto 0;
+    }
+}
+
+/* Footer styling ========================*/
+
+
+footer {
+    background-color: var(--membership-bg-color);
+    color: var(--text-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    float: left;
+    margin-left: 10px;
+    width: 161px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+.footer-socmedia {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socmedia a {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    width: 30px; /* Fixed width for the circle */
+    height: 30px; /* Fixed height for the circle */
+    background-color: var(--text-color); /* Background color for the circle */
+    border-radius: 50%; /* Circular shape */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-socmedia a i {
+    color: var(--membership-bg-color); /* Text color for social media icons */
+    font-size: 1rem; /* Font size for social media icons */
+}
+
+.footer-socmedia a:hover {
+    background-color: var(--membership-bg-color); /* Background color on hover */
+}
+
+.footer-socmedia a:hover i {
+    color: var(--text-color); /* Hover color for social media icons */
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffffff4b;
+}
+
+/* fix for mobile screen */
+@media only screen and (max-width: 480px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        /*force to center*/
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+}
+
